@@ -15,7 +15,8 @@
     },
     
     "target":"MAX78000",
-    "board":"EvKit_V1",
+    // "board":"EvKit_V1",
+    "board":"FTHR_RevA",
 
     "project_name":"${workspaceFolderBasename}",
 
@@ -23,7 +24,7 @@
     "symbol_file":"${config:program_file}",
 
     "M4_OCD_interface_file":"cmsis-dap.cfg",
-    "M4_OCD_target_file":"${config:target}.cfg",
+    "M4_OCD_target_file":"max78000.cfg",
     "RV_OCD_interface_file":"ftdi/olimex-arm-usb-ocd-h.cfg",
     "RV_OCD_target_file":"${config:target}_riscv.cfg",
 
@@ -53,7 +54,9 @@
         "${config:MAXIM_PATH}/Libraries/MiscDrivers/LED",
         "${config:MAXIM_PATH}/Libraries/MiscDrivers/PMIC",
         "${config:MAXIM_PATH}/Libraries/MiscDrivers/PushButton",
-        "${config:MAXIM_PATH}/Libraries/MiscDrivers/Touchscreen"
+        "${config:MAXIM_PATH}/Libraries/MiscDrivers/Touchscreen",
+        "${config:MAXIM_PATH}/Libraries/MiscDrivers/EEPROM",
+        "${config:MAXIM_PATH}/Libraries/MiscDrivers/CODEC"
     ],
     "C_Cpp.default.browse.path": [
         "${workspaceFolder}",
@@ -67,13 +70,21 @@
         "${config:MAXIM_PATH}/Libraries/MiscDrivers/PMIC",
         "${config:MAXIM_PATH}/Libraries/MiscDrivers/PushButton",
         "${config:MAXIM_PATH}/Libraries/MiscDrivers/Touchscreen",
-        "${config:MAXIM_PATH}/Libraries/MiscDrivers"
+        "${config:MAXIM_PATH}/Libraries/MiscDrivers",
+        "${config:MAXIM_PATH}/Libraries/MiscDrivers/ADC",
+        "${config:MAXIM_PATH}/Libraries/MiscDrivers/EEPROM",
+        "${config:MAXIM_PATH}/Libraries/MiscDrivers/CODEC"
     ],
     "C_Cpp.default.defines": [
         
     ],
     "C_Cpp.default.forcedInclude": [
         "${workspaceFolder}/build/project_defines.h"
-    ]
+    ],
+    "files.associations": {
+        ".fantomasignore": "ignore",
+        "weights.h": "c",
+        "cnn.h": "c",
+        "bitmap.h": "c"
+    }
 }
-
